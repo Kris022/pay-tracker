@@ -1,4 +1,282 @@
+:root{
+  --main-bg: #464b4d;
+  --old-bg: #abbcd6;
+
+  --tbl-div: #abc2cc;
+  --th-color: #4f0418;
+  --tr-base: #e3c4b1;
+  --tr-other: #dea887;
+  --tr-hover: coral;
+
+  --sidenav-div: #a9e884;
+
+  --select-color: #464b4d;
+  --select-text: #abc2cc;
+
+  --secondary-color: #f5e342;
+}
+
 body{
-  background-color: gray;
-  
+  background-color: var(--main-bg);
+  font-family: arial;
+  margin: 0;
+}
+
+
+.addGrpForm {
+  width: 25%;
+  margin: 10px;
+  height: auto;
+  background-color: #8faddb;
+  float: left;
+}
+
+.conductedLessonData {
+  clear: both;
+  background-color: var(--tbl-div);
+  border-radius: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  width: 75%;
+  padding: 5px;
+  padding-bottom: 32px;
+  overflow-x:auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.conductedLessonData table{
+  margin-left: auto;
+  margin-right: auto;
+  border-collapse: collapse;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 90%;
+  font-size: 20px;
+}
+
+.conductedLessonData th, td{
+  padding: 10px;
+
+}
+
+.conductedLessonData th{
+  background-color: var(--th-color);
+  color: white;
+}
+
+.conductedLessonData tr{
+  background-color: var(--tr-base);
+}
+
+.conductedLessonData tr:nth-child(even) {
+  background-color: var(--tr-other);
+}
+
+.conductedLessonData tr:hover{
+  background-color: var(--tr-hover);
+  cursor: pointer;
+}
+
+.conductedLessonData table, tr, td, th{
+ border:none;
+}
+
+.conductedLessonData select{
+  display: block;
+  width: 20%;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 25px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--select-color);
+  color: var(--select-text);
+  overflow-y: auto;
+}
+
+.conductedLessonData h1{
+ font-size: 45px;
+ text-align: center;
+ text-decoration: underline;
+}
+
+.conductedLessonData h2{
+  display: block;
+ font-size: 25px;
+ width: 25%;
+ text-align: left;
+ margin-bottom: 0px;
+ margin-left: 70px;
+}
+
+.conductedLessonData h3{
+  display: block;
+ font-size: 25px;
+ width: 25%;
+ text-align: left;
+ margin-top: 0px;
+ margin-left: 70px;
+ margin-bottom: 35px;
+}
+
+
+
+
+
+.addConDiv{
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  background-color: #d4ca70;
+
+}
+
+.addConForm{
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.addConForm label{
+  display: block;
+}
+
+.addConForm input{
+  display: block;
+  width: 92%;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.addConForm select{
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.addConForm input[type='submit']{
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+
+
+
+
+.addGrpForm{
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.addGrpForm h1{
+  font-size: 45px;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.addGrpForm label{
+  display: block;
+}
+
+.addGrpForm input[type="text"] {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  height: 35px;
+  border: 3px solid #ccc;
+  background-color: transparent;
+  outline: none;
+}
+
+.addGrpForm input[type=text]:focus {
+  border: 3px solid #555;
+}
+
+.addGrpForm input[type=submit]{
+  display: block;
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 15px;
+
+  margin-top: 40px;
+  margin-bottom: 25px;
+}
+
+
+
+
+
+
+.side-menu {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #8098e8; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.side-menu i {
+  margin-right: 20px;
+}
+
+.side-menu a {
+  background-color: #8098e8;
+  padding: 8px;
+  display: block;
+  text-align: left;
+  font-size: 20px;
+  width: auto;
+  color: black;
+  border-bottom: 1px solid black;
+  text-decoration: none;
+}
+
+.side-menu .logoutBtn{
+  border-top: 1px solid black;
+  border-bottom: none;
+  position: absolute;
+  bottom: 60px;
+  width: 95%;
+}
+
+.side-menu a:hover {
+  background-color: #bea6e0;
+}
+
+.side-menu .closebtn {
+  position: absolute;
+  top: 0;
+  text-align: left;
+  text-decoration: none;
+  border: none;
+  width: inherit;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.side-nav-small{
+  float: left;
+  height: 100vh;
+  font-size: 20px;
+  position: fixed;
+  top: 0;
+  background-color: var(--sidenav-div);
+  border:none;
+  padding: 10px;
 }
