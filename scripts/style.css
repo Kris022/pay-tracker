@@ -14,10 +14,14 @@
   --select-text: #abc2cc;
 
   --secondary-color: #f5e342;
+
+  --form-yellow: #d4ca70;
 }
 
 body{
   background-color: var(--main-bg);
+/*  background-image: url("5137894.jpg");
+  background-size: 1920px;*/
   font-family: arial;
   margin: 0;
 }
@@ -125,13 +129,22 @@ body{
 
 
 
+/*----------------- Add Conducted Lessons -----------------*/
+.addConDiv h2{
+  text-decoration: underline;
+}
 
 .addConDiv{
   max-width: 500px;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
   padding: 10px;
   background-color: #d4ca70;
+/*  background-color: transparent;
+  border: 3px solid var(--form-yellow);
+  border-radius: 5px;*/
 
 }
 
@@ -143,13 +156,13 @@ body{
 
 .addConForm label{
   display: block;
+  margin-top: 20px;
 }
 
 .addConForm input{
   display: block;
   width: 92%;
   padding: 10px;
-  margin-bottom: 20px;
 }
 
 .addConForm select{
@@ -162,9 +175,21 @@ body{
 .addConForm input[type='submit']{
   display: block;
   width: 100%;
-  padding: 10px;
+  padding: 10px, 10px; /*top, right, bottom, left*/
   margin-bottom: 20px;
+  background-color: transparent;
+  border: 2px solid var(--main-bg);;
+  color: white;
+  font-size: 20px;
 }
+
+.addConForm input[type='submit']:hover {
+  transition-duration: 500ms;
+  background-color: var(--main-bg);
+  border: 2px solid var(--form-yellow);
+}
+
+
 
 
 

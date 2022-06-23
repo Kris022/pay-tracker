@@ -43,17 +43,17 @@
     echo "<input type='date' name='lessonDate' value='".$today."'>";
 
     $row = $result->fetch_assoc();
-      echo "<p>Lesson Duration</p>";
+      echo "<label for='lessonDur'>Lesson Duration</label>";
       echo "<input type=time name='lessonDur' value='".$row['groupDuration']."'>";
-      echo "<p>Lesson Day</p>";
+      echo "<label for='lessonDay'>Lesson Day</label>";
       echo "<input type='text' name='lessonDay' value='".$row['lessonDay']."'>";
-      echo "<p>Lesson Time</p>";
+      echo "<label for='lessonTime'>Lesson Time</label>";
       echo "<input type=time name='lessonTime' value='".$row['lessonTime']."'>";
 
-      echo "<p>Rate:</p>";
+      echo "<label for='groupRate'>Rate:</label>";
       echo "<input type='number' name='groupRate' value='".$row['rate']."'>";
 
-    echo "<p>Group Type:</p>";
+    echo "<label for='conductedGroupType'>Group Type:</label>";
     echo "<select name='conductedGroupType'>";
       echo "<option selected disabled hidden>Select group type</option>";
       echo "<option value='group'>Group</option>";

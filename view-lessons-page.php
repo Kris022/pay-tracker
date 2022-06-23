@@ -5,14 +5,14 @@
   include("includes/header.php");
 
   include("includes/sidenav.php");
-
+  //$month = date("m");
  ?>
-
 </div>
 <div class="conductedLessonData">
   <h1>Conducted Lessons</h1>
   <form action="" method="post">
-    
+    <p style="color:red;">DISPLAY CURRENT MONTH BY DEAFULT</p>
+
     <select class="" onchange="submit()" name="chosenMonth">
       <option selected disabled hidden >Select a month</option>
       <option value="January">January</option>
@@ -41,6 +41,7 @@
       <th>Rate</th>
     </tr>
 <?php
+
 if (isset($_POST['chosenMonth'])){
   $month = $_POST['chosenMonth'];
   displayConductedLessons($conn, $month); // add year
@@ -54,6 +55,7 @@ if (isset($_POST['chosenMonth'])){
 //  echo "After spendings:"; // links with phone and updates
                           // get fuel rates
 }
+
  ?>
 </table>
 </div>

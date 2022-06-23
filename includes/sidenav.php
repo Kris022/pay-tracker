@@ -4,7 +4,8 @@
   <a href="add-lsn-page.php"><i class="fas fa-chalkboard-teacher"></i>Add Lesson</a>
   <a href="view-lessons-page.php"><i class="fas fa-table"></i>View Lessons</a>
   <a href="add-group-page.php"><i class="fas fa-users"></i>Add New Group</a>
-  <a href="#" class="logoutBtn">Logout</a>
+  <a href="home.php"><i class="fa-solid fa-house"></i>Home</a>
+  <a href="#" class="logoutBtn"><i class="fa-solid fa-door-open"></i>Logout</a>
 </div>
 
 <span onclick="openNav();">
