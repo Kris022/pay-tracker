@@ -26,6 +26,92 @@ body{
   margin: 0;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+}
+
+.home-icon{
+  background-color: #9933cc;
+  color: #ffffff;
+  text-align: center;
+
+}
+.home-icon:hover{
+  background-color: gray;
+  cursor: pointer;
+}
+
+.side-menu {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #8098e8; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.side-menu i {
+  margin-right: 20px;
+}
+
+.side-menu a {
+  background-color: #8098e8;
+  padding: 8px;
+  display: block;
+  text-align: left;
+  font-size: 20px;
+  width: auto;
+  color: black;
+  border-bottom: 1px solid black;
+  text-decoration: none;
+}
+
+.side-menu .logoutBtn{
+  border-top: 1px solid black;
+  border-bottom: none;
+  position: absolute;
+  bottom: 60px;
+  width: 95%;
+}
+
+.side-menu a:hover {
+  background-color: #bea6e0;
+}
+
+.side-menu .closebtn {
+  position: absolute;
+  top: 0;
+  text-align: left;
+  text-decoration: none;
+  border: none;
+  width: inherit;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.side-nav-small{
+  float: left;
+  height: 100vh;
+  font-size: 20px;
+  position: fixed;
+  top: 0;
+  background-color: var(--sidenav-div);
+  border:none;
+  padding: 10px;
+}
+
+
+
 
 .addGrpForm {
   width: 25%;
@@ -241,67 +327,7 @@ body{
 
 
 
-
-.side-menu {
-  height: 100%; /* 100% Full-height */
-  width: 0; /* 0 width - change this with JavaScript */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Stay on top */
-  top: 0; /* Stay at the top */
-  left: 0;
-  background-color: #8098e8; /* Black*/
-  overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 60px; /* Place content 60px from the top */
-  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.side-menu i {
-  margin-right: 20px;
-}
-
-.side-menu a {
-  background-color: #8098e8;
-  padding: 8px;
-  display: block;
-  text-align: left;
-  font-size: 20px;
-  width: auto;
-  color: black;
-  border-bottom: 1px solid black;
-  text-decoration: none;
-}
-
-.side-menu .logoutBtn{
-  border-top: 1px solid black;
-  border-bottom: none;
-  position: absolute;
-  bottom: 60px;
-  width: 95%;
-}
-
-.side-menu a:hover {
-  background-color: #bea6e0;
-}
-
-.side-menu .closebtn {
-  position: absolute;
-  top: 0;
-  text-align: left;
-  text-decoration: none;
-  border: none;
-  width: inherit;
-  padding: 10px;
-  font-size: 20px;
-}
-
-.side-nav-small{
-  float: left;
-  height: 100vh;
-  font-size: 20px;
-  position: fixed;
-  top: 0;
-  background-color: var(--sidenav-div);
-  border:none;
-  padding: 10px;
+.my-custom-row{
+  background-color: bisque;
+  height: 400px;
 }

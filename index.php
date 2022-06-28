@@ -1,6 +1,7 @@
 <?php
   include("includes/preamble.php");
   include("includes/header.php");
+  header("Location: home.php");
  ?>
 
 <?php

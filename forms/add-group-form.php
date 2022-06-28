@@ -1,4 +1,4 @@
-<form class="form1" method="post">
+<form class="addConForm" method="post">
   <p>Group Name</p>
   <input type="text" name="groupName" placeholder="Group Name">
 
@@ -19,7 +19,7 @@
   <option value="" selected disabled hidden>Select group type</option>
     <option value="group">Group</option>
     <option value="individual">Individual</option>
-  </select>  
+  </select>
 
   <div class="">
     <input type="submit" name="addCrsBtn" value="Add Course">

@@ -47,13 +47,6 @@ if (isset($_POST['chosenMonth'])){
   displayConductedLessons($conn, $month); // add year
   echo "<br>";
   showPayments($conn, $month);
-//  echo "<br>";
-//  echo "Estimated for this month: ";
-//  echo "<br>";
-//  echo "Weekly: ";
-//  echo "<br>";
-//  echo "After spendings:"; // links with phone and updates
-                          // get fuel rates
 }
 
  ?>
