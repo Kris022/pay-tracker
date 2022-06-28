@@ -19,11 +19,15 @@
 }
 
 body{
-  background-color: var(--main-bg);
+  background-color: var(--main-bg) !important;
 /*  background-image: url("5137894.jpg");
   background-size: 1920px;*/
   font-family: arial;
   margin: 0;
+}
+
+.my-custom-container{
+
 }
 
 * {
@@ -328,6 +332,5 @@ body{
 
 
 .my-custom-row{
-  background-color: bisque;
-  height: 400px;
+  
 }
