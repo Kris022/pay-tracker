@@ -1,5 +1,7 @@
 <?php
 
+$month = ""; // set to current month
+
 function connectDB(){
   $host = "localhost";
   $db_user = "root";
@@ -41,54 +43,11 @@ function addNewGroup($conn){
 
 }
 
-function displayConductedLessons($conn, $month){
-  $sql = "SELECT * FROM conducted_lessons WHERE userID='1' AND monthname(lessonDate)='$month' ORDER BY lessonDate";
-  //$sql2 = "SELECT grouptbl.groupName FROM conducted_lessons INNER JOIN grouptbl ON conducted_lessons.groupName=grouptbl.groupName WHERE conducted_lessons.userID=1";
-  $result = mysqli_query($conn, $sql);
-
-  echo "<h2>Month: ".$month."</h2>";
-
-  while($row = $result->fetch_assoc()){
-    echo "<tr>";
-      echo "<td>";
-        echo $row['lessonName']." M".$row['moduleNum']."L".$row['lessonNum'];
-      echo "</td>";
-
-      echo "<td>";
-        echo $row['lessonDate'];
-      echo "</td>";
-
-      echo "<td>";
-        echo $row['lessonTime'];
-      echo "</td>";
-
-      echo "<td>";
-        echo $row['duration'];
-      echo "</td>";
-
-      echo "<td>";
-        echo $row['groupName'];
-      echo "</td>";
-
-      echo "<td>";
-      echo $row['type'];
-      echo "</td>";
-
-      echo "<td>";
-        echo "£".$row['price'];
-      echo "</td>";
-
-    echo "</tr>";
-  }
-//  echo "</table>";
-}
-
 function showPayments($conn, $month){
   $sql = "SELECT SUM(price) AS value_sum FROM conducted_lessons WHERE monthname(lessonDate)='$month'"; // where date = specified date
-  $result = mysqli_query($conn, $sql);
+  $result = $conn->query("$sql");
   $row = mysqli_fetch_assoc($result);
-  $sum = $row['value_sum'];
-  echo "<h3>Total: £".$sum."</h3>";
+  echo "<h3>Total: £".$row['value_sum']."</h3>";
 }
 
 function addConductedLesson($conn){

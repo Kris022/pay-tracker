@@ -1,5 +1,7 @@
 :root{
-  --main-bg: #464b4d;
+  font-size: 16px;
+
+  --main-bg: #b0b0b0;
   --old-bg: #abbcd6;
 
   --tbl-div: #abc2cc;
@@ -8,7 +10,9 @@
   --tr-other: #dea887;
   --tr-hover: coral;
 
-  --sidenav-div: #a9e884;
+  --sidenav-div: green;
+  --nav-hover: #50C878;
+  --nav-text: #FAF9F6;
 
   --select-color: #464b4d;
   --select-text: #abc2cc;
@@ -18,7 +22,8 @@
   --form-yellow: #d4ca70;
 }
 
-body{
+
+body {
   background-color: var(--main-bg) !important;
 /*  background-image: url("5137894.jpg");
   background-size: 1920px;*/
@@ -26,311 +31,70 @@ body{
   margin: 0;
 }
 
-.my-custom-container{
-
+main {
+  margin-left: 5rem;
+  padding: 1rem;
 }
 
-* {
-  box-sizing: border-box;
-}
-
-[class*="col-"] {
-  float: left;
-  padding: 15px;
-}
-
-.home-icon{
-  background-color: #9933cc;
-  color: #ffffff;
-  text-align: center;
-
-}
-.home-icon:hover{
-  background-color: gray;
-  cursor: pointer;
-}
-
-.side-menu {
-  height: 100%; /* 100% Full-height */
-  width: 0; /* 0 width - change this with JavaScript */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Stay on top */
-  top: 0; /* Stay at the top */
-  left: 0;
-  background-color: #8098e8; /* Black*/
-  overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 60px; /* Place content 60px from the top */
-  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.side-menu i {
-  margin-right: 20px;
-}
-
-.side-menu a {
-  background-color: #8098e8;
-  padding: 8px;
-  display: block;
-  text-align: left;
-  font-size: 20px;
-  width: auto;
-  color: black;
-  border-bottom: 1px solid black;
-  text-decoration: none;
-}
-
-.side-menu .logoutBtn{
-  border-top: 1px solid black;
-  border-bottom: none;
-  position: absolute;
-  bottom: 60px;
-  width: 95%;
-}
-
-.side-menu a:hover {
-  background-color: #bea6e0;
-}
-
-.side-menu .closebtn {
-  position: absolute;
-  top: 0;
-  text-align: left;
-  text-decoration: none;
-  border: none;
-  width: inherit;
-  padding: 10px;
-  font-size: 20px;
-}
-
-.side-nav-small{
-  float: left;
+.navbar {
+  width: 5rem;
   height: 100vh;
-  font-size: 20px;
   position: fixed;
-  top: 0;
   background-color: var(--sidenav-div);
-  border:none;
-  padding: 10px;
+  transition: width 150ms ease;
 }
 
-
-
-
-.addGrpForm {
-  width: 25%;
-  margin: 10px;
-  height: auto;
-  background-color: #8faddb;
-  float: left;
+.navbar-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.conductedLessonData {
-  clear: both;
-  background-color: var(--tbl-div);
-  border-radius: 15px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 2%;
-  margin-bottom: 2%;
-  width: 75%;
-  padding: 5px;
-  padding-bottom: 32px;
-  overflow-x:auto;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
+.nav-item {
+  width: 100%;
 }
 
-.conductedLessonData table{
-  margin-left: auto;
-  margin-right: auto;
-  border-collapse: collapse;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  width: 90%;
-  font-size: 20px;
+.nav-link {
+  display: flex;
+  align-items: center;
+  height: 5rem;
+  text-decoration: none;
 }
 
-.conductedLessonData th, td{
-  padding: 10px;
-
+.nav-link:hover {
+  background-color: var(--nav-hover);
 }
 
-.conductedLessonData th{
-  background-color: var(--th-color);
-  color: white;
-}
-
-.conductedLessonData tr{
-  background-color: var(--tr-base);
-}
-
-.conductedLessonData tr:nth-child(even) {
-  background-color: var(--tr-other);
-}
-
-.conductedLessonData tr:hover{
-  background-color: var(--tr-hover);
-  cursor: pointer;
-}
-
-.conductedLessonData table, tr, td, th{
- border:none;
-}
-
-.conductedLessonData select{
-  display: block;
-  width: 20%;
-  margin-left: auto;
-  margin-right: auto;
+.nav-link i {
+  min-width: 2rem;
+  margin: 0 1.5rem;
   font-size: 25px;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  background-color: var(--select-color);
-  color: var(--select-text);
-  overflow-y: auto;
+  color: var(--nav-text);
 }
 
-.conductedLessonData h1{
- font-size: 45px;
- text-align: center;
- text-decoration: underline;
+.navbar:hover {
+  width: 16rem;
+  box-shadow: 2px 2px 30px;
 }
 
-.conductedLessonData h2{
+.navbar:hover .nav-text{
   display: block;
- font-size: 25px;
- width: 25%;
- text-align: left;
- margin-bottom: 0px;
- margin-left: 70px;
 }
 
-.conductedLessonData h3{
-  display: block;
- font-size: 25px;
- width: 25%;
- text-align: left;
- margin-top: 0px;
- margin-left: 70px;
- margin-bottom: 35px;
-}
-
-
-
-
-/*----------------- Add Conducted Lessons -----------------*/
-.addConDiv h2{
-  text-decoration: underline;
-}
-
-.addConDiv{
-  max-width: 500px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  padding: 10px;
-  background-color: #d4ca70;
-/*  background-color: transparent;
-  border: 3px solid var(--form-yellow);
-  border-radius: 5px;*/
-
-}
-
-.addConForm{
-  max-width: 300px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.addConForm label{
-  display: block;
-  margin-top: 20px;
-}
-
-.addConForm input{
-  display: block;
-  width: 92%;
-  padding: 10px;
-}
-
-.addConForm select{
-  display: block;
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 20px;
-}
-
-.addConForm input[type='submit']{
-  display: block;
-  width: 100%;
-  padding: 10px, 10px; /*top, right, bottom, left*/
-  margin-bottom: 20px;
-  background-color: transparent;
-  border: 2px solid var(--main-bg);;
-  color: white;
+.nav-text {
+  display: none;
+  margin-left: 1rem;
   font-size: 20px;
+  color: var(--nav-text);
 }
 
-.addConForm input[type='submit']:hover {
-  transition-duration: 500ms;
-  background-color: var(--main-bg);
-  border: 2px solid var(--form-yellow);
-}
-
-
-
-
-
-
-
-.addGrpForm{
-  width: 95%;
+.container-centered {
+  width: 80%;
+  border: solid 2px green;
+  margin-top: 2rem;
   margin-left: auto;
   margin-right: auto;
-}
-
-.addGrpForm h1{
-  font-size: 45px;
-  text-align: center;
-  text-decoration: underline;
-}
-
-.addGrpForm label{
-  display: block;
-}
-
-.addGrpForm input[type="text"] {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
-  height: 35px;
-  border: 3px solid #ccc;
-  background-color: transparent;
-  outline: none;
-}
-
-.addGrpForm input[type=text]:focus {
-  border: 3px solid #555;
-}
-
-.addGrpForm input[type=submit]{
-  display: block;
-  width: 75%;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 15px;
-
-  margin-top: 40px;
-  margin-bottom: 25px;
-}
-
-
-
-
-
-.my-custom-row{
-  
 }

@@ -1,8 +1,6 @@
 <?php
   include("includes/preamble.php");
   include("includes/header.php");
-  include("includes/sidenav.php");
-
  ?>
 
  <div class="addGrpForm">
