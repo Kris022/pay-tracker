@@ -34,7 +34,7 @@
   <div class="table-div">
     <?php if ($month != ""): ?>
 
-      <h2>Month: <?php echo $month; ?></h2>
+      <h2><span style="font-weight: 100;">Month:</span> <?php echo $month; ?></h2>
       <?php showPayments($conn, $month); ?>
 
       <table>

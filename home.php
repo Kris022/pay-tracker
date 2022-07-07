@@ -3,7 +3,7 @@
   include("includes/header.php");
 ?>
 
-<div class="container">
+<div class="container-centered">
   <h1>Welcome, Home!</h1>
 </div>
 

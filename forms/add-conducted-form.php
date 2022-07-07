@@ -1,6 +1,6 @@
 <form class="addConForm" method="post">
 
-  <h2>Add Conducted Lesson</h2>
+  
   <label for="conGroupName">Select a group: </label>
   <select name="conGroupName" onchange="submit()">
   <option value="" selected disabled hidden>Select group name</option>

@@ -1,8 +1,10 @@
 :root{
   font-size: 16px;
 
-  --main-bg: #b0b0b0;
   --old-bg: #abbcd6;
+  --main-bg: #425266;
+
+  --container-bg: #2c3847;
 
   --tbl-div: #abc2cc;
   --th-color: #4f0418;
@@ -10,8 +12,8 @@
   --tr-other: #dea887;
   --tr-hover: coral;
 
-  --sidenav-div: green;
-  --nav-hover: #50C878;
+  --sidenav-div: #008080;
+  --nav-hover: #28bf94;
   --nav-text: #FAF9F6;
 
   --select-color: #464b4d;
@@ -20,15 +22,23 @@
   --secondary-color: #f5e342;
 
   --form-yellow: #d4ca70;
+
+  --primary-green: #32a852;
+  --secondary-green: #38cf5b;
+
+  --text-1: #d7ddde;
+  --warm-white: #e0ded1;
 }
 
 
 body {
   background-color: var(--main-bg) !important;
-/*  background-image: url("5137894.jpg");
+  /*
+  background-image: url("5137894.jpg");
   background-size: 1920px;*/
   font-family: arial;
   margin: 0;
+  color: var(--text-1);
 }
 
 main {
@@ -36,6 +46,17 @@ main {
   padding: 1rem;
 }
 
+/*----------- Animaitons -----------*/
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/*----------- Navigation Bar (Left) -----------*/
 .navbar {
   width: 5rem;
   height: 100vh;
@@ -77,7 +98,7 @@ main {
 
 .navbar:hover {
   width: 16rem;
-  box-shadow: 2px 2px 30px;
+  box-shadow: 2px 2px 30px black;
 }
 
 .navbar:hover .nav-text{
@@ -91,10 +112,112 @@ main {
   color: var(--nav-text);
 }
 
+
+
+/*----------- Deafult Container Style -----------*/
 .container-centered {
   width: 80%;
-  border: solid 2px green;
-  margin-top: 2rem;
+  border-radius: 5px;
+  background-color: var(--container-bg);
+  padding: 10px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   margin-left: auto;
   margin-right: auto;
+}
+
+.conductedLessonData select {
+  padding: 10px 25px;
+  background-color: none;
+}
+
+/*----------- Table Style -----------*/
+table {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
+  border-collapse: collapse;
+  font-size: 20px;
+
+}
+
+th {
+  text-align: center;
+  padding: 8px;
+  background-color: var(--primary-green);
+}
+
+td {
+  padding: 10px;
+}
+
+tr:nth-child(odd) {
+  background-color: #425266;
+}
+
+tr:hover {
+  background-color: #008080;
+  cursor: pointer;
+}
+
+/*----------- Forms (DEAFULT)) -----------*/
+input[type=text], input[type=number], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+
+  background-color: var(--main-bg);
+  color: white;
+  border: 1px solid transparent;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+}
+
+input[type=text]:focus, input[type=date]:focus, input[type=time]:focus, input[type=number]:focus {
+  border: 1px solid var(--text-1);
+}
+
+select {
+  background-color: var(--main-bg);
+  color: white;
+  border: 1px solid transparent;
+}
+
+
+input[type=date], input[type=time] {
+  width: 100%;
+  background-color: var(--main-bg);
+  color: white;
+  border: 1px solid transparent;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+}
+
+input[type=submit] {
+  width: 100%;
+  font-size: 24px;
+  padding: 15px 0;
+  margin: 16px 0;
+  background-color: var(--primary-green);
+  border: 1px solid transparent;
+  border-radius: 4px;
+  color: white;
+
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+input[type=submit]:hover {
+  background-color: var(--nav-hover);
+  cursor: pointer;
 }

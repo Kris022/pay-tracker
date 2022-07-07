@@ -1,3 +1,6 @@
 <script src="https://kit.fontawesome.com/ec5d8ffbcf.js" crossorigin="anonymous"></script>
 
 <link rel="stylesheet" href="icons/css/fontello.css">
+
+background: rgb(48,125,185);
+background: linear-gradient(148deg, rgba(48,125,185,1) 35%, rgba(255,0,228,1) 100%);
